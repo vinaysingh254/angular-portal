@@ -9,7 +9,7 @@ import { FooterComponent } from './components/common/footer/footer.component';
 import { KmsFormContainerComponent } from './containers/kms-form-container.component';
 import { JwtInterceptor } from './_helpers/jwt-interceptor';
 import { ErrorInterceptor } from './_helpers/error-interceptor';
-import { FakeBackendInterceptor } from './_helpers/fake-backend-interceptor';
+import { FakeBackendInterceptor, fakeBackendProvider } from './_helpers/fake-backend-interceptor';
 import { AlertComponent } from './components/common/alert.component';
 import { LoginComponent } from './components/common/login.component';
 import { RegisterComponent } from './components/common/register.component';
@@ -35,7 +35,7 @@ import { ReactiveFormsModule }    from '@angular/forms';
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
      // provider used to create fake backend
-    FakeBackendInterceptor
+     fakeBackendProvider
   ],
   bootstrap: [AppComponent]
 })

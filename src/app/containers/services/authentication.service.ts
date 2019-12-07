@@ -22,7 +22,7 @@ export class AuthenticationService {
   }
 
   login(username: string, password: string) {
-    return this.httpClient.post<any>(`${environment.apiUrl}/user/authenticate`, { username, password })
+    return this.httpClient.post<any>(`${environment.apiUrl}/users/authenticate`, { username, password })
       .pipe(map(user => {
         //login successfull only if there is a jwt token in the response
         if (user && user.token) {
