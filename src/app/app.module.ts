@@ -14,6 +14,7 @@ import { AlertComponent } from './components/common/alert.component';
 import { LoginComponent } from './components/common/login.component';
 import { RegisterComponent } from './components/common/register.component';
 import { ReactiveFormsModule }    from '@angular/forms';
+import { KeyComponent } from './components/kms/key.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { ReactiveFormsModule }    from '@angular/forms';
     KmsFormContainerComponent,
     AlertComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    KeyComponent
   ],
   imports: [
     BrowserModule,

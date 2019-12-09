@@ -1,9 +1,26 @@
-<h1>Hi {{currentUser.firstName}}!</h1>
-<p>You're logged in with Angular 7!!</p>
-<h3>All registered users:</h3>
-<ul>
-    <li *ngFor="let user of users">
-        {{user.username}} ({{user.firstName}} {{user.lastName}})
-        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
-    </li>
-</ul>
+<div class="container content">
+    <div class="row">
+        <div class="col-md-12"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-12">
+                    <app-key></app-key>
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col-md-12">left top2</div>
+            </div> -->
+        </div>
+        <div class="col-md-4">
+            <h1>Hi {{currentUser.firstName}}!</h1>
+            <ul>
+                <li *ngFor="let user of users">
+                    {{user.username}} ({{user.firstName}} {{user.lastName}})
+                    - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
